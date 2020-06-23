@@ -27,11 +27,11 @@ extension ApiRoute {
 		case .login:
 			return url + "api/session"
 		case .getItems:
-			return ""
+			return url + "api/menu_items/"
 		case .getAllMenus:
 			return url + "api/menus/"
 		case .getRestaurants:
-			return ""
+			return url + "api/restaurants"
 		}
 	}
 	
