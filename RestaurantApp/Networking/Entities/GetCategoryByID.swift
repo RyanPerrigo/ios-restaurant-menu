@@ -9,9 +9,9 @@
 import Foundation
 
 
-struct Category: Decodable {
+struct CategoryEntity: Decodable {
 	let category_id: Int
-	let menu_items: [MenuItem]
+	let menu_items: [MenuItemEntity]
 	let name: String
 	let type: String
 }

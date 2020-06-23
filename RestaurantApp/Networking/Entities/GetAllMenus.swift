@@ -8,13 +8,17 @@
 
 import Foundation
 
-struct data: Decodable {
-	let nestedMenu: menu
+struct GetAllMenusRootResponseEntity {
+	let data: DataEntity
 }
 
-struct menu: Decodable {
+struct DataEntity: Decodable {
+	let menu: [MenuEntity]
+}
+
+struct MenuEntity: Decodable {
 	let categories: [Category]
-	let menuId: Int
+	let menu_id: Int
 	let name: String
 	let type: String
 }

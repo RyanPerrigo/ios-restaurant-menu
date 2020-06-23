@@ -8,14 +8,21 @@
 
 import Foundation
 
-struct MenuItem: Decodable {
-	let data: MenuDescription
+
+struct MenuItemEntity: Decodable {
+	let data: MenuItemDataEntity
 }
 
-struct MenuDescription: Decodable {
+struct MenuItemDataEntity: Decodable {
 	let description: String
-	let Id: Int
+	let id: Int
 	let name: String
-	let price: Double
+	let price: Int
 	let type: String
 }
+
+//CRUD
+// Create - POST
+// Read - GET
+// Update - PUT
+// Delete - DELETE
