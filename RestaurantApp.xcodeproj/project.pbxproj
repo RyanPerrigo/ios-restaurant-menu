@@ -14,11 +14,15 @@
 		4B3D7FD12496E30A00D73101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3D7FD02496E30A00D73101 /* Assets.xcassets */; };
 		4B3D7FD42496E30A00D73101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3D7FD22496E30A00D73101 /* LaunchScreen.storyboard */; };
 		4B3D7FDF2496E4FE00D73101 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7FDE2496E4FE00D73101 /* Constants.swift */; };
-		4B3D7FE1249964EB00D73101 /* APIMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7FE0249964EB00D73101 /* APIMapping.swift */; };
 		4B3D7FE32499719800D73101 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7FE22499719800D73101 /* WelcomeViewController.swift */; };
 		4B3D7FE52499736500D73101 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7FE42499736500D73101 /* LoginViewController.swift */; };
 		4B3D7FED2499BBAE00D73101 /* PostLoginUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7FEC2499BBAE00D73101 /* PostLoginUserEntity.swift */; };
 		4B3D7FEF2499BCE100D73101 /* PostLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7FEE2499BCE100D73101 /* PostLoginResponse.swift */; };
+		4B578FCF249A6B8700D35130 /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FCE249A6B8700D35130 /* ApiPath.swift */; };
+		4B578FD1249D4D8B00D35130 /* GetMenuByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FD0249D4D8B00D35130 /* GetMenuByID.swift */; };
+		4B578FD3249D4ECC00D35130 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FD2249D4ECC00D35130 /* MenuItem.swift */; };
+		4B578FD5249D525D00D35130 /* GetAllMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FD4249D525D00D35130 /* GetAllMenus.swift */; };
+		4B578FD724A1264C00D35130 /* GetCategoryByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FD624A1264C00D35130 /* GetCategoryByID.swift */; };
 		A294DF573F2EE4211D9E14E3 /* Pods_RestaurantApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C8555BF18B5CB87646E820 /* Pods_RestaurantApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,11 +36,15 @@
 		4B3D7FD32496E30A00D73101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B3D7FD52496E30A00D73101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3D7FDE2496E4FE00D73101 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4B3D7FE0249964EB00D73101 /* APIMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMapping.swift; sourceTree = "<group>"; };
 		4B3D7FE22499719800D73101 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4B3D7FE42499736500D73101 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = RestaurantApp/Controller/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		4B3D7FEC2499BBAE00D73101 /* PostLoginUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginUserEntity.swift; sourceTree = "<group>"; };
 		4B3D7FEE2499BCE100D73101 /* PostLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginResponse.swift; sourceTree = "<group>"; };
+		4B578FCE249A6B8700D35130 /* ApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
+		4B578FD0249D4D8B00D35130 /* GetMenuByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMenuByID.swift; sourceTree = "<group>"; };
+		4B578FD2249D4ECC00D35130 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		4B578FD4249D525D00D35130 /* GetAllMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMenus.swift; sourceTree = "<group>"; };
+		4B578FD624A1264C00D35130 /* GetCategoryByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryByID.swift; sourceTree = "<group>"; };
 		B75149DFF2BB13485DECC79B /* Pods-RestaurantApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.release.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.release.xcconfig"; sourceTree = "<group>"; };
 		E3C8555BF18B5CB87646E820 /* Pods_RestaurantApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9218330425F497451EE344A /* Pods-RestaurantApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +116,6 @@
 		4B3D7FDC2496E4D500D73101 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4B3D7FE0249964EB00D73101 /* APIMapping.swift */,
 				4B3D7FCB2496E30700D73101 /* ViewController.swift */,
 				4B3D7FE42499736500D73101 /* LoginViewController.swift */,
 			);
@@ -136,6 +143,11 @@
 			children = (
 				4B3D7FEC2499BBAE00D73101 /* PostLoginUserEntity.swift */,
 				4B3D7FEE2499BCE100D73101 /* PostLoginResponse.swift */,
+				4B578FCE249A6B8700D35130 /* ApiPath.swift */,
+				4B578FD0249D4D8B00D35130 /* GetMenuByID.swift */,
+				4B578FD2249D4ECC00D35130 /* MenuItem.swift */,
+				4B578FD4249D525D00D35130 /* GetAllMenus.swift */,
+				4B578FD624A1264C00D35130 /* GetCategoryByID.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -264,15 +276,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B578FD5249D525D00D35130 /* GetAllMenus.swift in Sources */,
 				4B3D7FE52499736500D73101 /* LoginViewController.swift in Sources */,
 				4B3D7FCC2496E30700D73101 /* ViewController.swift in Sources */,
 				4B3D7FC82496E30700D73101 /* AppDelegate.swift in Sources */,
 				4B3D7FE32499719800D73101 /* WelcomeViewController.swift in Sources */,
 				4B3D7FCA2496E30700D73101 /* SceneDelegate.swift in Sources */,
+				4B578FD724A1264C00D35130 /* GetCategoryByID.swift in Sources */,
 				4B3D7FDF2496E4FE00D73101 /* Constants.swift in Sources */,
-				4B3D7FE1249964EB00D73101 /* APIMapping.swift in Sources */,
+				4B578FD1249D4D8B00D35130 /* GetMenuByID.swift in Sources */,
 				4B3D7FEF2499BCE100D73101 /* PostLoginResponse.swift in Sources */,
+				4B578FD3249D4ECC00D35130 /* MenuItem.swift in Sources */,
 				4B3D7FED2499BBAE00D73101 /* PostLoginUserEntity.swift in Sources */,
+				4B578FCF249A6B8700D35130 /* ApiPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

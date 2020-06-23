@@ -41,17 +41,19 @@ class LoginViewController: UIViewController {
 		)
 		
 		
-		let request = AF.request(
-			K.BASE_URL + "api/session",
+		let loginRequest = AF.request(
+			 ApiRoute.login.path,
 			method: .post,
 			parameters: postLoginUserEntity, // or `userDictionary` because both conform to `Encodable`
 			encoder: JSONParameterEncoder.default)
 		
-		request.responseDecodable(of: PostLoginResponse.self) { response in
+		loginRequest.responseDecodable(of: PostLoginResponse.self) { response in
 			
 			switch response.result {
 			case let .success(result):
 				debugPrint(result.data.access_token)
+				
+				
 				
 				break
 				
