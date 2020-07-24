@@ -9,11 +9,11 @@
 import Foundation
 
 
-struct MenuItemEntity: Decodable {
+struct MenuItemEntity: Codable {
 	let data: MenuItemDataEntity
 }
 
-struct MenuItemDataEntity: Decodable {
+struct MenuItemDataEntity: Codable {
 	let description: String
 	let id: Int
 	let name: String

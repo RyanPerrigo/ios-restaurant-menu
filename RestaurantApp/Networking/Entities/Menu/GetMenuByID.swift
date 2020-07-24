@@ -8,11 +8,15 @@
 
 import Foundation
 
-struct topLevelMenu: Decodable {
-	let categories: [Category]
+
+struct GetMenuResponseEntity: Decodable {
+	let menu: RootMenuEntity
+}
+struct RootMenuEntity: Decodable {
+	let categories: [CategoryEntity]?
 	let menu_id: Int
 	let name: String
 	let type: String
-	
 }
+
 

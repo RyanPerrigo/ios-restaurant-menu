@@ -11,6 +11,9 @@ import Alamofire
 
 class LoginViewController: UIViewController {
 	
+	
+	
+	
 	let endPoints = ["api/session"]
 	struct login: Codable {
 		let user = [
@@ -18,20 +21,20 @@ class LoginViewController: UIViewController {
 			"password" : "password"
 		]
 	}
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		// Do any additional setup after loading the view.
+	}
+	
 	@IBOutlet weak var emailTextField: UITextField!
 	
 	@IBOutlet weak var passwordTextField: UITextField!
 	
 	
 	@IBAction func loginButton(_ sender: UIButton) {
-		typealias completionHandler = ([[ String: Any]]?, Error?)
+		//		typealias completionHandler = ([[ String: Any]]?, Error?)
 		
 		let postLoginUserEntity = PostLoginUserEntity(
 			user: PostLoginParams(
@@ -41,8 +44,9 @@ class LoginViewController: UIViewController {
 		)
 		
 		
+		// login request
 		let loginRequest = AF.request(
-			 ApiRoute.login.path,
+			ApiRoute.login.path,
 			method: .post,
 			parameters: postLoginUserEntity, // or `userDictionary` because both conform to `Encodable`
 			encoder: JSONParameterEncoder.default)
@@ -53,12 +57,12 @@ class LoginViewController: UIViewController {
 			case let .success(result):
 				debugPrint(result.data.access_token)
 				
-				
+				self.performSegue(withIdentifier: "goToGetRequests", sender: self)
 				
 				break
 				
 			case let .failure(error):
-				
+				debugPrint("please try again \(error.localizedDescription)")
 				break
 				
 			}
@@ -66,15 +70,15 @@ class LoginViewController: UIViewController {
 		}
 	}
 }
-		
+
 //		request.validate().responseJSON { response in
 //			if let error = response.error {
 //				completion(nil, error)
 //		}
-			
-		
+
+
 //		let login = Login(email: emailTextField.text!, password: passwordTextField.text!)
-		
+
 
 //		AF.request(K.BASE_URL + "api/session",
 //				   method: .post,
@@ -82,16 +86,16 @@ class LoginViewController: UIViewController {
 //				).response { response in
 //			debugPrint(response)
 //		}
-		
-//	}
-	/*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//	}
+/*
+// MARK: - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+// Get the new view controller using segue.destination.
+// Pass the selected object to the new view controller.
+}
+*/
 
 //}

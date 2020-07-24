@@ -1,17 +1,16 @@
 //
-//  GetCategoryByID.swift
+//  Category.swift
 //  RestaurantApp
 //
-//  Created by Ryan Perrigo on 6/22/20.
+//  Created by Ryan Perrigo on 7/13/20.
 //  Copyright © 2020 Ryan Perrigo. All rights reserved.
 //
 
 import Foundation
 
 
-struct CategoryEntity: Decodable {
+struct PostCategoryEntity: Codable {
 	let category_id: Int
-	let menu_items: [MenuItemEntity]
 	let name: String
 	let type: String
 }

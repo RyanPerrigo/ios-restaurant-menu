@@ -13,4 +13,8 @@ struct K {
 	static var welcomeString = "Welcome to Ryans Steak House!!"
 	static var loginViewControllerString = "toLoginViewController"
 	static let BASE_URL = "https://intense-ravine-56469.herokuapp.com/"
+	static let reuseCell = "menuItemCell"
+}
+struct SegueStrings {
+	static var dataPopOver = "presentDataPopover"
 }
