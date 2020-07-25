@@ -14,14 +14,14 @@ class LoginViewController: UIViewController {
 	
 	
 	
-//	let endPoints = ["api/session"]
-//	struct login: Codable {
-//		let user = [
-//			"email": "Ryan.Perrigo@gmail.com",
-//			"password" : "password"
-//		]
-//	}
-//	
+	//	let endPoints = ["api/session"]
+	//	struct login: Codable {
+	//		let user = [
+	//			"email": "Ryan.Perrigo@gmail.com",
+	//			"password" : "password"
+	//		]
+	//	}
+	//
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
 	@IBAction func loginButton(_ sender: UIButton) {
 		//		typealias completionHandler = ([[ String: Any]]?, Error?)
 		
-	
+		
 		
 		let postLoginUserEntity = PostLoginUserEntity(
 			user: PostLoginParams(
@@ -54,11 +54,11 @@ class LoginViewController: UIViewController {
 			encoder: JSONParameterEncoder.default)
 		
 		//show spinner here
-		
+		showSpinner(onView: self.view)
 		loginRequest.responseDecodable(of: PostLoginResponse.self) { response in
 			
 			//hide spinner here
-			
+			self.removeSpinner()
 			switch response.result {
 			case let .success(result):
 				debugPrint(result.data.access_token)
@@ -77,31 +77,28 @@ class LoginViewController: UIViewController {
 	}
 }
 
-//		request.validate().responseJSON { response in
-//			if let error = response.error {
-//				completion(nil, error)
-//		}
+var vSpinner : UIView?
 
-
-//		let login = Login(email: emailTextField.text!, password: passwordTextField.text!)
-
-
-//		AF.request(K.BASE_URL + "api/session",
-//				   method: .post,
-//				   parameters: userLoginParams?.toJSON()
-//				).response { response in
-//			debugPrint(response)
-//		}
-
-//	}
-/*
-// MARK: - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-// Get the new view controller using segue.destination.
-// Pass the selected object to the new view controller.
+extension UIViewController {
+	func showSpinner(onView : UIView) {
+		let spinnerView = UIView.init(frame: onView.bounds)
+		spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+		let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+		ai.startAnimating()
+		ai.center = spinnerView.center
+		
+		DispatchQueue.main.async {
+			spinnerView.addSubview(ai)
+			onView.addSubview(spinnerView)
+		}
+		
+		vSpinner = spinnerView
+	}
+	
+	func removeSpinner() {
+		DispatchQueue.main.async {
+			vSpinner?.removeFromSuperview()
+			vSpinner = nil
+		}
+	}
 }
-*/
-
-//}
