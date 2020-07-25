@@ -45,8 +45,8 @@ class CategoryCollectionViewController: UICollectionViewController {
 	
 	override func numberOfSections(in collectionView: UICollectionView) -> Int {
 		
-		guard let intReturn = displayDataVCMenuEntity?.menu.categories?.count else {return 1}
-		return intReturn
+//		guard let intReturn = displayDataVCMenuEntity?.menu.categories?.count else {return 1}
+		return 1
 	}
 	
 	
@@ -84,6 +84,9 @@ extension CategoryCollectionViewController {
 		
 		var cell = UICollectionViewCell()
 		//		setCustomCellName(at: indexPath)
+	
+		
+		
 		if let safeCategoriesEntity = displayDataVCMenuEntity?.menu.categories {
 //			let individualCategory = safeCategoriesEntity[indexPath.row]
 			let newArray = safeCategoriesEntity.map { $0.name }
@@ -91,6 +94,7 @@ extension CategoryCollectionViewController {
 		dataSource = newArray
 			
 		}
+		
 		if let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryItemCell", for: indexPath) as? CustomCollectionViewCell {
 			customCell.populateCategoryName(named: dataSource[indexPath.row])
 			

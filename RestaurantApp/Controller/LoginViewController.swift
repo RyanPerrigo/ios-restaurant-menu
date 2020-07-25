@@ -14,14 +14,14 @@ class LoginViewController: UIViewController {
 	
 	
 	
-	let endPoints = ["api/session"]
-	struct login: Codable {
-		let user = [
-			"email": "Ryan.Perrigo@gmail.com",
-			"password" : "password"
-		]
-	}
-	
+//	let endPoints = ["api/session"]
+//	struct login: Codable {
+//		let user = [
+//			"email": "Ryan.Perrigo@gmail.com",
+//			"password" : "password"
+//		]
+//	}
+//	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -35,6 +35,8 @@ class LoginViewController: UIViewController {
 	
 	@IBAction func loginButton(_ sender: UIButton) {
 		//		typealias completionHandler = ([[ String: Any]]?, Error?)
+		
+	
 		
 		let postLoginUserEntity = PostLoginUserEntity(
 			user: PostLoginParams(
@@ -51,7 +53,11 @@ class LoginViewController: UIViewController {
 			parameters: postLoginUserEntity, // or `userDictionary` because both conform to `Encodable`
 			encoder: JSONParameterEncoder.default)
 		
+		//show spinner here
+		
 		loginRequest.responseDecodable(of: PostLoginResponse.self) { response in
+			
+			//hide spinner here
 			
 			switch response.result {
 			case let .success(result):
