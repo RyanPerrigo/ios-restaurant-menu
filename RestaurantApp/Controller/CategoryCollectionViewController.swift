@@ -22,9 +22,10 @@ Fish | $20.00
 */
 
 class CategoryCollectionViewController: UICollectionViewController {
+	var globalIndexPathNumber: Int?
 	
-	var dataSource: [String] = []
-	
+	var globalCategoryNameArray: [String] = []
+	var globalCellName: String = ""
 	var displayDataVCMenuEntity: GetMenuResponseEntity?
 	var globalCell: UICollectionViewCell?
 	var i : Int?
@@ -32,20 +33,16 @@ class CategoryCollectionViewController: UICollectionViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Register cell classes
-		//		self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: K.reuseCell)
-		
-		// Do any additional setup after
-		//loading the view.
 		print("DISPLAY DATA COLLECTION")
 		print(displayDataVCMenuEntity!)
+		
 	}
 	
 	// MARK: UICollectionViewDataSource
 	
 	override func numberOfSections(in collectionView: UICollectionView) -> Int {
 		
-//		guard let intReturn = displayDataVCMenuEntity?.menu.categories?.count else {return 1}
+		//		guard let intReturn = displayDataVCMenuEntity?.menu.categories?.count else {return 1}
 		return 1
 	}
 	
@@ -60,47 +57,60 @@ class CategoryCollectionViewController: UICollectionViewController {
 		
 	}
 	
-	
 }
 //MARK: - Label Text manipulation
 extension CategoryCollectionViewController {
+	func doSegue () {
+		performSegue(withIdentifier: K.foodPressed, sender: self)
+	}
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		if let destinationVC = segue.destination as? MenuItemTableViewController {
+			destinationVC.customCellName = globalCellName
+			destinationVC.passedIndexRowNumber = globalIndexPathNumber
+		}
+		
+		}
 	
+	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let cellNumber = indexPath.row
+		doSegue()
+//		if cellNumber == 0 {
+//			globalCellName = "Food"
+//			globalIndexPathNumber = 0
+//
+//		}
+//		if cellNumber == 1 {
+//			globalCellName = "Drinks"
+//			globalIndexPathNumber = 1
+//
+//		}
+//
+		
 	
-	//	func setCustomCellName (at indexPath: IndexPath) {
-	//		let cell = CustomCollectionViewCell()
-	//
-	//		if {
-	//			categoryLabelText.text = categoryName
-	//		} else {
-	//			let debugString = "Cannot Display Category Name"
-	//			cell.populateCategoryName(named: debugString)
-	//		}
-	//
-	//
-	//
-	//	}
+		
+	}
+	
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		
 		var cell = UICollectionViewCell()
 		//		setCustomCellName(at: indexPath)
-	
-		
 		
 		if let safeCategoriesEntity = displayDataVCMenuEntity?.menu.categories {
-//			let individualCategory = safeCategoriesEntity[indexPath.row]
+			//			let individualCategory = safeCategoriesEntity[indexPath.row]
 			let newArray = safeCategoriesEntity.map { $0.name }
 			
-		dataSource = newArray
+			globalCategoryNameArray = newArray
 			
 		}
 		
 		if let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryItemCell", for: indexPath) as? CustomCollectionViewCell {
-			customCell.populateCategoryName(named: dataSource[indexPath.row])
+			customCell.populateCategoryName(named: globalCategoryNameArray[indexPath.row])
 			
 			cell = customCell
 		}
-			
+		
 		return cell
 		
 		// Configure the cell
@@ -108,3 +118,4 @@ extension CategoryCollectionViewController {
 	}
 	
 }
+

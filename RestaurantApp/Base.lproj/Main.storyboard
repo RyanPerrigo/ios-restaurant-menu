@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gY4-Bk-Vqk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gY4-Bk-Vqk">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -210,33 +210,52 @@
             </objects>
             <point key="canvasLocation" x="1071.859296482412" y="-1363.3093525179856"/>
         </scene>
-        <!--Returned Data Table View Controller-->
-        <scene sceneID="3RG-ps-tq0">
+        <!--Menu Item Table View Controller-->
+        <scene sceneID="A2L-bB-D0r">
             <objects>
-                <tableViewController id="vhY-UI-DiS" customClass="ReturnedDataTableViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qar-eR-S6e">
-                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                <tableViewController id="zOx-KU-749" customClass="MenuItemTableViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="s11-ct-R4H">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="794"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuItemCell" id="ZFm-Yb-Ws2">
-                                <rect key="frame" x="0.0" y="28" width="1194" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuItemCell" id="K5L-Cc-0He" customClass="MenuItemCustomTableViewCell" customModule="RestaurantApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="712" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZFm-Yb-Ws2" id="9NV-3i-7dS">
-                                    <rect key="frame" x="0.0" y="0.0" width="1194" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K5L-Cc-0He" id="Qd0-ha-gL3">
+                                    <rect key="frame" x="0.0" y="0.0" width="712" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKu-n1-6Ce">
+                                            <rect key="frame" x="20" y="11" width="672" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fKu-n1-6Ce" firstAttribute="centerY" secondItem="Qd0-ha-gL3" secondAttribute="centerY" id="7Gc-xM-p5L"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fKu-n1-6Ce" secondAttribute="trailing" id="DDJ-gV-cDo"/>
+                                        <constraint firstItem="fKu-n1-6Ce" firstAttribute="leading" secondItem="Qd0-ha-gL3" secondAttribute="leadingMargin" id="LWM-f7-ZgC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fKu-n1-6Ce" secondAttribute="bottom" id="QA3-q5-CZL"/>
+                                        <constraint firstItem="fKu-n1-6Ce" firstAttribute="top" secondItem="Qd0-ha-gL3" secondAttribute="topMargin" id="ooy-gT-IP1"/>
+                                        <constraint firstItem="fKu-n1-6Ce" firstAttribute="centerX" secondItem="Qd0-ha-gL3" secondAttribute="centerX" id="phW-gE-2DW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="menuItemNameLabel" destination="fKu-n1-6Ce" id="OKR-Ps-Xls"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="vhY-UI-DiS" id="CM7-zS-8cl"/>
-                            <outlet property="delegate" destination="vhY-UI-DiS" id="fWT-WY-Fr8"/>
+                            <outlet property="dataSource" destination="zOx-KU-749" id="Mq9-Fc-eGk"/>
+                            <outlet property="delegate" destination="zOx-KU-749" id="h2n-UD-CJ4"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="avI-zZ-ouy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7H-VY-dlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-411" y="-726"/>
+            <point key="canvasLocation" x="-308" y="-2013"/>
         </scene>
         <!--Category Collection View Controller-->
         <scene sceneID="wbx-Fk-XUk">
@@ -284,6 +303,9 @@
                             <outlet property="delegate" destination="xp4-cd-fRI" id="tu6-PQ-NyD"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="zOx-KU-749" kind="presentation" identifier="goToCategoryItems" id="Ts7-N7-bia"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69M-gk-dhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
