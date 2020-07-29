@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 	
 	@IBAction func jumpToFood(_ sender: UIButton) {
 
-		performSegue(withIdentifier: SegueStrings.categoriesVC, sender: self)
+		performSegue(withIdentifier: SegueStrings.toCategoriesVC, sender: self)
 //		let alert = UIAlertController(title: "The Data You Requested", message: responseToString, preferredStyle: .alert)
 //		present(alert, animated: true, completion: nil)
 //		makeRequest(to: ApiRoute.getMenuById.path)

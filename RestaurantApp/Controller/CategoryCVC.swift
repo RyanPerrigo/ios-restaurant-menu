@@ -13,6 +13,7 @@ private let reuseIdentifier = CellID.categoryCell
 class CategoryCVC: UICollectionViewController {
 	
 	var responseData: GetMenuResponseEntity?
+	var globalIndexPath: GlobalIndexPath?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +27,17 @@ class CategoryCVC: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let vc = segue.destination as! CategoryItemsTVC
+		
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -73,7 +76,11 @@ class CategoryCVC: UICollectionViewController {
     
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-		print("I BEN CLIKD YO")
+		GlobalIndexPath.globalIndexPath = indexPath.item
+		
+		performSegue(withIdentifier: SegueStrings.toMenuItemsVC, sender: indexPath)
+		
+		print("I BEN CLIKD YO \(indexPath.item)")
         return true
     }
     

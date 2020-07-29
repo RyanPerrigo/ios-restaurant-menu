@@ -8,6 +8,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Category ItemsTVC-->
+        <scene sceneID="oIg-wj-amn">
+            <objects>
+                <tableViewController id="B3a-u9-MvR" customClass="CategoryItemsTVC" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ca1-Hj-Tha">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="794"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thismenuitemcell" id="qRk-wb-4Qd" customClass="MenuItemTVCCell" customModule="RestaurantApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="712" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qRk-wb-4Qd" id="xqb-A0-e4K">
+                                    <rect key="frame" x="0.0" y="0.0" width="712" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA1-eR-JBe">
+                                            <rect key="frame" x="298" y="0.0" width="117" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="menuItemCellName" destination="OA1-eR-JBe" id="U8j-4t-viF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B3a-u9-MvR" id="idy-0r-fA3"/>
+                            <outlet property="delegate" destination="B3a-u9-MvR" id="kn7-hg-VcT"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOV-Ke-TeW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.768844221105525" y="-1634.5323741007196"/>
+        </scene>
         <!--CategoryCVC-->
         <scene sceneID="9nk-Ca-b7S">
             <objects>
@@ -43,6 +83,7 @@
                                 <size key="customSize" width="256" height="256"/>
                                 <connections>
                                     <outlet property="CategoryNameLabel" destination="n50-7r-7EO" id="MDU-q9-Lr3"/>
+                                    <segue destination="B3a-u9-MvR" kind="presentation" identifier="offToItems" id="csR-zM-1HY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

@@ -16,8 +16,13 @@ struct K {
 	static let reuseCell = "menuItemCell"
 }
 struct SegueStrings {
-	static var categoriesVC = "goToCategoriesVC"
+	static let toCategoriesVC = "goToCategoriesVC"
+	static let toMenuItemsVC = "offToItems"
 }
 struct CellID {
-	static let categoryCell = "thiskatcell" 
+	static let categoryCell = "thiskatcell"
+	static let menuItemCell = "thismenuitemcell"
+}
+struct GlobalIndexPath {
+	static var globalIndexPath = 0
 }

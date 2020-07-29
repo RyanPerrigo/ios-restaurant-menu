@@ -27,6 +27,8 @@
 		4B578FDB24BCC8F900D35130 /* PostCategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FDA24BCC8F900D35130 /* PostCategoryEntity.swift */; };
 		4B5A9B1F24D1DB940000201B /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */; };
 		4B5A9B2124D1DCA60000201B /* CategoryCVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */; };
+		4B5A9B2324D1EFEA0000201B /* CategoryItemsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2224D1EFEA0000201B /* CategoryItemsTVC.swift */; };
+		4B5A9B2524D1F04A0000201B /* MenuItemTVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2424D1F04A0000201B /* MenuItemTVCCell.swift */; };
 		4BA3EFA824C6566900A46AC1 /* GetMenuItemById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFA724C6566900A46AC1 /* GetMenuItemById.swift */; };
 		4BA3EFB024C8C84500A46AC1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */; };
 		A294DF573F2EE4211D9E14E3 /* Pods_RestaurantApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C8555BF18B5CB87646E820 /* Pods_RestaurantApp.framework */; };
@@ -55,6 +57,8 @@
 		4B578FDA24BCC8F900D35130 /* PostCategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCategoryEntity.swift; sourceTree = "<group>"; };
 		4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
 		4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVCCell.swift; sourceTree = "<group>"; };
+		4B5A9B2224D1EFEA0000201B /* CategoryItemsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsTVC.swift; sourceTree = "<group>"; };
+		4B5A9B2424D1F04A0000201B /* MenuItemTVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTVCCell.swift; sourceTree = "<group>"; };
 		4BA3EFA724C6566900A46AC1 /* GetMenuItemById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMenuItemById.swift; sourceTree = "<group>"; };
 		4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		B75149DFF2BB13485DECC79B /* Pods-RestaurantApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.release.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				4B3D7FCB2496E30700D73101 /* ViewController.swift */,
 				4B3D7FE42499736500D73101 /* LoginViewController.swift */,
 				4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */,
+				4B5A9B2224D1EFEA0000201B /* CategoryItemsTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			children = (
 				4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */,
 				4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */,
+				4B5A9B2424D1F04A0000201B /* MenuItemTVCCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				4B578FD724A1264C00D35130 /* GetCategoryByID.swift in Sources */,
 				4BA3EFB024C8C84500A46AC1 /* CustomCollectionViewCell.swift in Sources */,
 				4B3D7FDF2496E4FE00D73101 /* Constants.swift in Sources */,
+				4B5A9B2324D1EFEA0000201B /* CategoryItemsTVC.swift in Sources */,
 				4B578FD1249D4D8B00D35130 /* GetMenuByID.swift in Sources */,
 				4B3D7FEF2499BCE100D73101 /* PostLoginResponse.swift in Sources */,
 				4B578FDB24BCC8F900D35130 /* PostCategoryEntity.swift in Sources */,
@@ -351,6 +358,7 @@
 				4B5A9B2124D1DCA60000201B /* CategoryCVCCell.swift in Sources */,
 				4B5A9B1F24D1DB940000201B /* CategoryCVC.swift in Sources */,
 				4B578FD3249D4ECC00D35130 /* MenuItem.swift in Sources */,
+				4B5A9B2524D1F04A0000201B /* MenuItemTVCCell.swift in Sources */,
 				4B3D7FED2499BBAE00D73101 /* PostLoginUserEntity.swift in Sources */,
 				4B578FCF249A6B8700D35130 /* ApiPath.swift in Sources */,
 			);
