@@ -20,10 +20,10 @@ class MenuItemTVCCell: UITableViewCell {
 //        super.setSelected(selected, animated: animated)
 //
         // Configure the view for the selected state
-	func setName (with name: GetMenuResponseEntity, drilledIndexPath: IndexPath) {
-		let indexPath = GlobalIndexPath.globalIndexPath
+	func setName (with menuItemEntity: MenuItemDataEntity) {
+//		let indexPath = GlobalIndexPath.globalIndexPath
 		
-		let cellName = name.menu.categories?[indexPath].menu_items?[drilledIndexPath.row].name
+		let cellName = menuItemEntity.name
 		
 		menuItemCellName.text = cellName
 	}

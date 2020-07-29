@@ -8,17 +8,18 @@
 
 import UIKit
 
-class CategoryItemsTVC: UITableViewController {
-	var responseData: GetMenuResponseEntity?
+//Actually Menu Items
+class MenuItemsTVC: UITableViewController {
+	
+	private var _menuItemsData: [MenuItemDataEntity]?
+	
+	func setMenuItems(menuItems: [MenuItemDataEntity]) {
+		_menuItemsData = menuItems
+	}
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+	
     }
 
     // MARK: - Table view data source
@@ -32,16 +33,19 @@ class CategoryItemsTVC: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
 		
 		let returnInt =
-			responseData?.menu.categories?.count
-        return returnInt ?? 2
+		_menuItemsData!.count ?? 2
+        return returnInt
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: CellID.menuItemCell, for: indexPath)
-			
-//			as! MenuItemTVCCell
-		cell.backgroundColor = UIColor.blue
+			as! MenuItemTVCCell
+		
+		cell.setName(with: _menuItemsData![indexPath.item])
+		
+//		cell.setName(with: <#T##MenuItemEntity#>)
+//		cell.backgroundColor = UIColor.blue
 //		cell.setName(with: responseData!, drilledIndexPath: indexPath)
 
         // Configure the cell...

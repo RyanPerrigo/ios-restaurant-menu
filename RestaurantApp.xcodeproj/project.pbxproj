@@ -27,7 +27,7 @@
 		4B578FDB24BCC8F900D35130 /* PostCategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FDA24BCC8F900D35130 /* PostCategoryEntity.swift */; };
 		4B5A9B1F24D1DB940000201B /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */; };
 		4B5A9B2124D1DCA60000201B /* CategoryCVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */; };
-		4B5A9B2324D1EFEA0000201B /* CategoryItemsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2224D1EFEA0000201B /* CategoryItemsTVC.swift */; };
+		4B5A9B2324D1EFEA0000201B /* MenuItemsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2224D1EFEA0000201B /* MenuItemsTVC.swift */; };
 		4B5A9B2524D1F04A0000201B /* MenuItemTVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2424D1F04A0000201B /* MenuItemTVCCell.swift */; };
 		4BA3EFA824C6566900A46AC1 /* GetMenuItemById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFA724C6566900A46AC1 /* GetMenuItemById.swift */; };
 		4BA3EFB024C8C84500A46AC1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */; };
@@ -57,7 +57,7 @@
 		4B578FDA24BCC8F900D35130 /* PostCategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCategoryEntity.swift; sourceTree = "<group>"; };
 		4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
 		4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVCCell.swift; sourceTree = "<group>"; };
-		4B5A9B2224D1EFEA0000201B /* CategoryItemsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsTVC.swift; sourceTree = "<group>"; };
+		4B5A9B2224D1EFEA0000201B /* MenuItemsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTVC.swift; sourceTree = "<group>"; };
 		4B5A9B2424D1F04A0000201B /* MenuItemTVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTVCCell.swift; sourceTree = "<group>"; };
 		4BA3EFA724C6566900A46AC1 /* GetMenuItemById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMenuItemById.swift; sourceTree = "<group>"; };
 		4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				4B3D7FCB2496E30700D73101 /* ViewController.swift */,
 				4B3D7FE42499736500D73101 /* LoginViewController.swift */,
 				4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */,
-				4B5A9B2224D1EFEA0000201B /* CategoryItemsTVC.swift */,
+				4B5A9B2224D1EFEA0000201B /* MenuItemsTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,7 +350,7 @@
 				4B578FD724A1264C00D35130 /* GetCategoryByID.swift in Sources */,
 				4BA3EFB024C8C84500A46AC1 /* CustomCollectionViewCell.swift in Sources */,
 				4B3D7FDF2496E4FE00D73101 /* Constants.swift in Sources */,
-				4B5A9B2324D1EFEA0000201B /* CategoryItemsTVC.swift in Sources */,
+				4B5A9B2324D1EFEA0000201B /* MenuItemsTVC.swift in Sources */,
 				4B578FD1249D4D8B00D35130 /* GetMenuByID.swift in Sources */,
 				4B3D7FEF2499BCE100D73101 /* PostLoginResponse.swift in Sources */,
 				4B578FDB24BCC8F900D35130 /* PostCategoryEntity.swift in Sources */,

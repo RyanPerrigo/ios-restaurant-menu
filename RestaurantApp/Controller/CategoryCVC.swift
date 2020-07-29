@@ -13,7 +13,7 @@ private let reuseIdentifier = CellID.categoryCell
 class CategoryCVC: UICollectionViewController {
 	
 	var responseData: GetMenuResponseEntity?
-	var globalIndexPath: GlobalIndexPath?
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,18 @@ class CategoryCVC: UICollectionViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		let vc = segue.destination as! CategoryItemsTVC
+		
+		
+		switch sender {
+		case let category as CategoryEntity:
+			print("IS A CATEGORY ENTITY")
+			let vc = segue.destination as! MenuItemsTVC
+			vc.setMenuItems(menuItems: category.menu_items ?? [])
+		case let menuItem as MenuItemEntity:
+			print("IS A MENU ITEM ENTITY")
+		default:
+			print("IS SOMETHING ELSE")
+		}
 		
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
@@ -76,9 +87,12 @@ class CategoryCVC: UICollectionViewController {
     
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-		GlobalIndexPath.globalIndexPath = indexPath.item
+//		GlobalIndexPath.globalIndexPath = indexPath.item
 		
-		performSegue(withIdentifier: SegueStrings.toMenuItemsVC, sender: indexPath)
+		let selectedCategory: CategoryEntity = responseData!.menu.categories![indexPath.item]
+//		responseData!
+		
+		performSegue(withIdentifier: SegueStrings.toMenuItemsVC, sender: selectedCategory)
 		
 		print("I BEN CLIKD YO \(indexPath.item)")
         return true
