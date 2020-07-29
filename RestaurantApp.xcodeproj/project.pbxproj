@@ -25,11 +25,10 @@
 		4B578FD724A1264C00D35130 /* GetCategoryByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FD624A1264C00D35130 /* GetCategoryByID.swift */; };
 		4B578FD924A2A92500D35130 /* Creds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FD824A2A92500D35130 /* Creds.swift */; };
 		4B578FDB24BCC8F900D35130 /* PostCategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B578FDA24BCC8F900D35130 /* PostCategoryEntity.swift */; };
+		4B5A9B1F24D1DB940000201B /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */; };
+		4B5A9B2124D1DCA60000201B /* CategoryCVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */; };
 		4BA3EFA824C6566900A46AC1 /* GetMenuItemById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFA724C6566900A46AC1 /* GetMenuItemById.swift */; };
-		4BA3EFAB24C72AD300A46AC1 /* ReturnedDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFAA24C72AD300A46AC1 /* ReturnedDataTableViewController.swift */; };
 		4BA3EFB024C8C84500A46AC1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */; };
-		4BA3EFB324C9D30500A46AC1 /* APIBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFB224C9D30500A46AC1 /* APIBrain.swift */; };
-		4BA3EFB524CA741200A46AC1 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3EFB424CA741200A46AC1 /* CategoryCollectionViewController.swift */; };
 		A294DF573F2EE4211D9E14E3 /* Pods_RestaurantApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C8555BF18B5CB87646E820 /* Pods_RestaurantApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +53,10 @@
 		4B578FD624A1264C00D35130 /* GetCategoryByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryByID.swift; sourceTree = "<group>"; };
 		4B578FD824A2A92500D35130 /* Creds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creds.swift; sourceTree = "<group>"; };
 		4B578FDA24BCC8F900D35130 /* PostCategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCategoryEntity.swift; sourceTree = "<group>"; };
+		4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
+		4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVCCell.swift; sourceTree = "<group>"; };
 		4BA3EFA724C6566900A46AC1 /* GetMenuItemById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMenuItemById.swift; sourceTree = "<group>"; };
-		4BA3EFAA24C72AD300A46AC1 /* ReturnedDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnedDataTableViewController.swift; sourceTree = "<group>"; };
 		4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		4BA3EFB224C9D30500A46AC1 /* APIBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBrain.swift; sourceTree = "<group>"; };
-		4BA3EFB424CA741200A46AC1 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		B75149DFF2BB13485DECC79B /* Pods-RestaurantApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.release.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.release.xcconfig"; sourceTree = "<group>"; };
 		E3C8555BF18B5CB87646E820 /* Pods_RestaurantApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9218330425F497451EE344A /* Pods-RestaurantApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,9 +129,7 @@
 				4B3D7FE22499719800D73101 /* WelcomeViewController.swift */,
 				4B3D7FCB2496E30700D73101 /* ViewController.swift */,
 				4B3D7FE42499736500D73101 /* LoginViewController.swift */,
-				4BA3EFAA24C72AD300A46AC1 /* ReturnedDataTableViewController.swift */,
-				4BA3EFB224C9D30500A46AC1 /* APIBrain.swift */,
-				4BA3EFB424CA741200A46AC1 /* CategoryCollectionViewController.swift */,
+				4B5A9B1E24D1DB940000201B /* CategoryCVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				4BA3EFAF24C8C84500A46AC1 /* CustomCollectionViewCell.swift */,
+				4B5A9B2024D1DCA60000201B /* CategoryCVCCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -339,9 +336,7 @@
 			files = (
 				4B578FD5249D525D00D35130 /* GetAllMenus.swift in Sources */,
 				4B3D7FE52499736500D73101 /* LoginViewController.swift in Sources */,
-				4BA3EFB324C9D30500A46AC1 /* APIBrain.swift in Sources */,
 				4B3D7FCC2496E30700D73101 /* ViewController.swift in Sources */,
-				4BA3EFAB24C72AD300A46AC1 /* ReturnedDataTableViewController.swift in Sources */,
 				4B3D7FC82496E30700D73101 /* AppDelegate.swift in Sources */,
 				4B3D7FE32499719800D73101 /* WelcomeViewController.swift in Sources */,
 				4B578FD924A2A92500D35130 /* Creds.swift in Sources */,
@@ -353,10 +348,11 @@
 				4B3D7FEF2499BCE100D73101 /* PostLoginResponse.swift in Sources */,
 				4B578FDB24BCC8F900D35130 /* PostCategoryEntity.swift in Sources */,
 				4BA3EFA824C6566900A46AC1 /* GetMenuItemById.swift in Sources */,
+				4B5A9B2124D1DCA60000201B /* CategoryCVCCell.swift in Sources */,
+				4B5A9B1F24D1DB940000201B /* CategoryCVC.swift in Sources */,
 				4B578FD3249D4ECC00D35130 /* MenuItem.swift in Sources */,
 				4B3D7FED2499BBAE00D73101 /* PostLoginUserEntity.swift in Sources */,
 				4B578FCF249A6B8700D35130 /* ApiPath.swift in Sources */,
-				4BA3EFB524CA741200A46AC1 /* CategoryCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,8 +29,8 @@ class ViewController: UIViewController {
 		
 	}
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let destinationVC = segue.destination as? CategoryCollectionViewController {
-			destinationVC.displayDataVCMenuEntity = globalResponseData
+		if let destinationVC = segue.destination as? CategoryCVC {
+			destinationVC.responseData = globalResponseData
 		}
 		
 	}
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 	
 	@IBAction func jumpToFood(_ sender: UIButton) {
 
-		performSegue(withIdentifier: "presentDataPopover", sender: self)
+		performSegue(withIdentifier: SegueStrings.categoriesVC, sender: self)
 //		let alert = UIAlertController(title: "The Data You Requested", message: responseToString, preferredStyle: .alert)
 //		present(alert, animated: true, completion: nil)
 //		makeRequest(to: ApiRoute.getMenuById.path)

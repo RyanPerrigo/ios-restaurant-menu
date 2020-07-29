@@ -16,5 +16,8 @@ struct K {
 	static let reuseCell = "menuItemCell"
 }
 struct SegueStrings {
-	static var dataPopOver = "presentDataPopover"
+	static var categoriesVC = "goToCategoriesVC"
+}
+struct CellID {
+	static let categoryCell = "thiskatcell" 
 }
